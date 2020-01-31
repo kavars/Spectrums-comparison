@@ -60,15 +60,27 @@
         // Pathname of the file
         NSURL *result = panel.URL;
         
+        
+        
         if (result != nil) {
             colorPath = result.path;
-            [self openColorSpector];
             
-            // recompute new object with old light
-            if (lightPath != nil) {
-                [self openLightSpector];
+            if ([[colorPath pathExtension]  isEqual: @"txt"]) {
+                [self openColorSpector];
+                
+                // recompute new object with old light
+                if (lightPath != nil) {
+                    [self openLightSpector];
+                }
+                [self updateView];
+            } else {
+                NSAlert *alert = [[NSAlert alloc] init];
+                [alert setMessageText:@"Wrong file type."];
+                [alert setInformativeText:@"Choose txt file."];
+                [alert addButtonWithTitle:@"Ok"];
+                [alert runModal];
+                colorPath = nil;
             }
-            [self updateView];
         }
     } else {
         // User clicked on "Cancel"
@@ -94,9 +106,20 @@
             
         if (result != nil) {
             lightPath = result.path;
+            
+            if ([[lightPath pathExtension]  isEqual: @"txt"]) {
+                [self openLightSpector];
+                [self updateView];
+            } else {
+                NSAlert *alert = [[NSAlert alloc] init];
+                [alert setMessageText:@"Wrong file type."];
+                [alert setInformativeText:@"Choose txt file."];
+                [alert addButtonWithTitle:@"Ok"];
+                [alert runModal];
+                lightPath = nil;
+            }
 
-            [self openLightSpector];
-            [self updateView];
+
         }
     } else {
         // User clicked on "Cancel"

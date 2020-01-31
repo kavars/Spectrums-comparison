@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1068,7 +1069,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-fM-Yr9">
-                                <rect key="frame" x="190" y="7" width="99" height="32"/>
+                                <rect key="frame" x="190" y="8" width="99" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="87" id="FVF-ol-n3x"/>
                                 </constraints>
@@ -1098,7 +1099,6 @@
                             <constraint firstItem="JIj-8A-5ah" firstAttribute="leading" secondItem="acd-CW-cxW" secondAttribute="trailing" constant="11" id="1Wn-r6-PeK"/>
                             <constraint firstItem="nqj-Fh-RwO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="127" id="1gz-mc-nqp"/>
                             <constraint firstItem="c3j-80-HDh" firstAttribute="top" secondItem="bSI-sT-9ZH" secondAttribute="bottom" constant="6" id="2gS-El-PEV"/>
-                            <constraint firstAttribute="bottom" secondItem="Jv5-fM-Yr9" secondAttribute="bottom" constant="14" id="2sK-wP-NHY"/>
                             <constraint firstItem="vQR-kZ-4ge" firstAttribute="leading" secondItem="hdB-Ln-hCu" secondAttribute="trailing" constant="7" id="32n-qN-QIv"/>
                             <constraint firstAttribute="bottom" secondItem="uxf-xz-whc" secondAttribute="bottom" constant="56" id="42E-18-7fd"/>
                             <constraint firstItem="fsH-zJ-CXc" firstAttribute="leading" secondItem="JIj-8A-5ah" secondAttribute="trailing" constant="7" id="4bO-MT-cJi"/>
@@ -1115,6 +1115,7 @@
                             <constraint firstItem="nqj-Fh-RwO" firstAttribute="leading" secondItem="Y7n-lk-0Js" secondAttribute="trailing" constant="46" id="AC8-9P-fCX"/>
                             <constraint firstItem="aBs-Pv-psS" firstAttribute="top" secondItem="9nu-jT-MAJ" secondAttribute="bottom" constant="9" id="ADE-ZQ-hAo"/>
                             <constraint firstItem="GUl-pm-Cr6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="AWm-nk-06Y"/>
+                            <constraint firstAttribute="bottom" secondItem="Jv5-fM-Yr9" secondAttribute="bottom" constant="15" id="Bw3-4B-2jO"/>
                             <constraint firstItem="dwz-cr-52F" firstAttribute="leading" secondItem="PtX-qN-9r2" secondAttribute="trailing" constant="45" id="Czt-5B-l4d"/>
                             <constraint firstItem="GUl-pm-Cr6" firstAttribute="top" secondItem="0vh-D1-mSx" secondAttribute="bottom" constant="9" id="DkM-99-EeB"/>
                             <constraint firstItem="MpF-ji-OsA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="EQz-xi-uJ1"/>
@@ -1157,6 +1158,7 @@
                             <constraint firstItem="udG-vM-tig" firstAttribute="leading" secondItem="aBs-Pv-psS" secondAttribute="trailing" constant="7" id="aBf-W3-IEc"/>
                             <constraint firstItem="WJ2-cy-hlu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="aQg-sB-nal"/>
                             <constraint firstAttribute="bottom" secondItem="JJm-0O-M9E" secondAttribute="bottom" constant="15" id="aqy-eW-w1f"/>
+                            <constraint firstItem="Jv5-fM-Yr9" firstAttribute="top" secondItem="zgu-Oi-8LJ" secondAttribute="bottom" constant="14" id="b6i-BP-73v"/>
                             <constraint firstItem="VEA-lW-UcU" firstAttribute="top" secondItem="0G8-gd-4Sm" secondAttribute="bottom" constant="9" id="bE3-55-ijh"/>
                             <constraint firstItem="RsI-c9-BQa" firstAttribute="leading" secondItem="nqj-Fh-RwO" secondAttribute="trailing" constant="165" id="bdP-l5-SMB"/>
                             <constraint firstItem="cOF-ah-Ldg" firstAttribute="leading" secondItem="zgu-Oi-8LJ" secondAttribute="trailing" constant="15" id="c2L-KW-0im"/>
@@ -1183,7 +1185,6 @@
                             <constraint firstItem="MpF-ji-OsA" firstAttribute="leading" secondItem="zgu-Oi-8LJ" secondAttribute="trailing" constant="15" id="on7-Lx-fzf"/>
                             <constraint firstItem="JJm-0O-M9E" firstAttribute="top" secondItem="Nea-Cj-znb" secondAttribute="bottom" constant="14" id="qRb-s3-Sce"/>
                             <constraint firstItem="OaE-Le-UY1" firstAttribute="leading" secondItem="0G8-gd-4Sm" secondAttribute="trailing" constant="48" id="qa8-hN-CT7"/>
-                            <constraint firstItem="Jv5-fM-Yr9" firstAttribute="top" secondItem="zgu-Oi-8LJ" secondAttribute="bottom" constant="15" id="rc9-dc-R5i"/>
                             <constraint firstItem="gXz-uZ-pWK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="201" id="rrh-cj-w0v"/>
                             <constraint firstItem="zgu-Oi-8LJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="s6N-pN-mbw"/>
                             <constraint firstItem="u3z-uY-EfP" firstAttribute="top" secondItem="gXz-uZ-pWK" secondAttribute="bottom" constant="6" id="sL4-sO-mq4"/>
