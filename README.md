@@ -2,15 +2,31 @@
 
 Spectrums comparison is an application which converts color spectrums to Lab and RGB and calculates ∆E76, ∆E94 and ∆E00.
 
-![Comparison view](Comparison_view.png)
-
 ## How it works:
 
+### Palette
+1. Upload CXF palette
+2. Choose object and light
+3. App will calculate ∆E76, ∆E94 and ∆E00. ([Wiki](https://en.wikipedia.org/wiki/Color_difference))
+
+### Single object/light
 1. Upload object's spectrum
 2. Upload light's spectrum (Colored light that will blend with the object)
 3. App will calculate ∆E76, ∆E94 and ∆E00. ([Wiki](https://en.wikipedia.org/wiki/Color_difference))
 
-## Spectrum file example:
+## Palette
+![Palette](Palette.png)
+
+### Palette format
+
+Palette format is "cxf"
+
+The palette file obtained by the i1Share program from X-Rite
+
+## Single object/light
+![Single](Single.png)
+
+### Spectrum file example:
 
 You can find some examples in example folder.
 
