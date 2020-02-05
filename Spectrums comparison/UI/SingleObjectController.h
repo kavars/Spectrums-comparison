@@ -1,34 +1,25 @@
 //
 //  ViewController.h
-//  Lab 2
+//  Spectrums comparison
 //
 //  Created by Kirill Varshamov on 27.01.2020.
 //  Copyright © 2020 Kirill Varshamov. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ColorClass.h"
 
 
-@interface ViewController : NSViewController
+@interface SingleObjectController : NSViewController
 
-@property ColorClass *object, *objectWithLight;
-
+// info fields
 @property (weak) IBOutlet NSTextField *backParam1;
 @property (weak) IBOutlet NSTextField *backParam2;
-
 @property (weak) IBOutlet NSTextField *objColor;
 @property (weak) IBOutlet NSTextField *lightColor;
-
-@property NSString *colorPath, *lightPath;
-
-- (IBAction)openColor:(NSButton *)sender;
-- (IBAction)openLight:(NSButton *)sender;
-- (IBAction)resetButton:(NSButton *)sender;
-
 @property (weak) IBOutlet NSTextField *infoTower;
 
-// only object
+
+// object
 @property (weak) IBOutlet NSTextField *R_obj;
 @property (weak) IBOutlet NSTextField *G_obj;
 @property (weak) IBOutlet NSTextField *B_obj;
@@ -50,6 +41,12 @@
 @property (weak) IBOutlet NSTextField *delta76;
 @property (weak) IBOutlet NSTextField *delta94;
 @property (weak) IBOutlet NSTextField *delta00;
+
+
+// buttons
+- (IBAction)openColor:(NSButton *)sender;
+- (IBAction)openLight:(NSButton *)sender;
+- (IBAction)resetButton:(NSButton *)sender;
 
 -(void) updateView;
 

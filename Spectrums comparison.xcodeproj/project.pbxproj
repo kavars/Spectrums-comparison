@@ -8,22 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		7E45B63223DEF7830007FDB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E45B63123DEF7830007FDB0 /* AppDelegate.m */; };
-		7E45B63523DEF7830007FDB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E45B63423DEF7830007FDB0 /* ViewController.m */; };
+		7E45B63523DEF7830007FDB0 /* SingleObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E45B63423DEF7830007FDB0 /* SingleObjectController.m */; };
 		7E45B63723DEF7840007FDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E45B63623DEF7840007FDB0 /* Assets.xcassets */; };
-		7E45B63A23DEF7840007FDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E45B63823DEF7840007FDB0 /* Main.storyboard */; };
 		7E45B63D23DEF7840007FDB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E45B63C23DEF7840007FDB0 /* main.m */; };
 		7E45B64923DEF7A10007FDB0 /* readFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E45B64623DEF7A10007FDB0 /* readFile.m */; };
 		7E45B64A23DEF7A10007FDB0 /* ColorClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E45B64823DEF7A10007FDB0 /* ColorClass.m */; };
+		7E592D2E23EB1062007725A1 /* CieCmfXYZSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E592D2D23EB1062007725A1 /* CieCmfXYZSingleton.m */; };
+		7E757AF323E9F90B0009BE1E /* CXFElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E757AF123E9F90B0009BE1E /* CXFElement.m */; };
+		7E757AF623E9FBCE0009BE1E /* CXFPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E757AF523E9FBCE0009BE1E /* CXFPalette.m */; };
+		7E83453A23E998480041CD7A /* PaletteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E83453923E998480041CD7A /* PaletteController.m */; };
+		7EDDB64523E8C1DA004BA1B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDDB64323E8C1DA004BA1B9 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E45B62D23DEF7830007FDB0 /* Spectrums comparison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spectrums comparison.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E45B63023DEF7830007FDB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E45B63123DEF7830007FDB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7E45B63323DEF7830007FDB0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7E45B63423DEF7830007FDB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7E45B63323DEF7830007FDB0 /* SingleObjectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleObjectController.h; sourceTree = "<group>"; };
+		7E45B63423DEF7830007FDB0 /* SingleObjectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleObjectController.m; sourceTree = "<group>"; };
 		7E45B63623DEF7840007FDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E45B63923DEF7840007FDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E45B63B23DEF7840007FDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E45B63C23DEF7840007FDB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7E45B63E23DEF7840007FDB0 /* Spectrums_comparison.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spectrums_comparison.entitlements; sourceTree = "<group>"; };
@@ -31,6 +34,15 @@
 		7E45B64623DEF7A10007FDB0 /* readFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = readFile.m; sourceTree = "<group>"; };
 		7E45B64723DEF7A10007FDB0 /* ColorClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorClass.h; sourceTree = "<group>"; };
 		7E45B64823DEF7A10007FDB0 /* ColorClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorClass.m; sourceTree = "<group>"; };
+		7E592D2C23EB1062007725A1 /* CieCmfXYZSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CieCmfXYZSingleton.h; sourceTree = "<group>"; };
+		7E592D2D23EB1062007725A1 /* CieCmfXYZSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CieCmfXYZSingleton.m; sourceTree = "<group>"; };
+		7E757AF123E9F90B0009BE1E /* CXFElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXFElement.m; sourceTree = "<group>"; };
+		7E757AF223E9F90B0009BE1E /* CXFElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXFElement.h; sourceTree = "<group>"; };
+		7E757AF423E9FBCE0009BE1E /* CXFPalette.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXFPalette.h; sourceTree = "<group>"; };
+		7E757AF523E9FBCE0009BE1E /* CXFPalette.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXFPalette.m; sourceTree = "<group>"; };
+		7E83453823E998480041CD7A /* PaletteController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteController.h; sourceTree = "<group>"; };
+		7E83453923E998480041CD7A /* PaletteController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteController.m; sourceTree = "<group>"; };
+		7EDDB64423E8C1DA004BA1B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +56,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E36ADCA23E8A39B009C81D6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7E45B63323DEF7830007FDB0 /* SingleObjectController.h */,
+				7E45B63423DEF7830007FDB0 /* SingleObjectController.m */,
+				7E83453823E998480041CD7A /* PaletteController.h */,
+				7E83453923E998480041CD7A /* PaletteController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		7E45B62423DEF7830007FDB0 = {
 			isa = PBXGroup;
 			children = (
@@ -63,15 +86,14 @@
 		7E45B62F23DEF7830007FDB0 /* Spectrums comparison */ = {
 			isa = PBXGroup;
 			children = (
+				7E36ADCA23E8A39B009C81D6 /* UI */,
 				7E45B64423DEF78C0007FDB0 /* Logic */,
 				7E45B63023DEF7830007FDB0 /* AppDelegate.h */,
 				7E45B63123DEF7830007FDB0 /* AppDelegate.m */,
-				7E45B63323DEF7830007FDB0 /* ViewController.h */,
-				7E45B63423DEF7830007FDB0 /* ViewController.m */,
-				7E45B63623DEF7840007FDB0 /* Assets.xcassets */,
-				7E45B63823DEF7840007FDB0 /* Main.storyboard */,
-				7E45B63B23DEF7840007FDB0 /* Info.plist */,
 				7E45B63C23DEF7840007FDB0 /* main.m */,
+				7EDDB64323E8C1DA004BA1B9 /* Main.storyboard */,
+				7E45B63623DEF7840007FDB0 /* Assets.xcassets */,
+				7E45B63B23DEF7840007FDB0 /* Info.plist */,
 				7E45B63E23DEF7840007FDB0 /* Spectrums_comparison.entitlements */,
 			);
 			path = "Spectrums comparison";
@@ -80,12 +102,26 @@
 		7E45B64423DEF78C0007FDB0 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				7E592D2F23EB106B007725A1 /* CXF Parser */,
 				7E45B64723DEF7A10007FDB0 /* ColorClass.h */,
 				7E45B64823DEF7A10007FDB0 /* ColorClass.m */,
+				7E592D2C23EB1062007725A1 /* CieCmfXYZSingleton.h */,
+				7E592D2D23EB1062007725A1 /* CieCmfXYZSingleton.m */,
 				7E45B64523DEF7A10007FDB0 /* readFile.h */,
 				7E45B64623DEF7A10007FDB0 /* readFile.m */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		7E592D2F23EB106B007725A1 /* CXF Parser */ = {
+			isa = PBXGroup;
+			children = (
+				7E757AF423E9FBCE0009BE1E /* CXFPalette.h */,
+				7E757AF523E9FBCE0009BE1E /* CXFPalette.m */,
+				7E757AF223E9F90B0009BE1E /* CXFElement.h */,
+				7E757AF123E9F90B0009BE1E /* CXFElement.m */,
+			);
+			path = "CXF Parser";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E45B63723DEF7840007FDB0 /* Assets.xcassets in Resources */,
-				7E45B63A23DEF7840007FDB0 /* Main.storyboard in Resources */,
+				7EDDB64523E8C1DA004BA1B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,8 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E45B63523DEF7830007FDB0 /* ViewController.m in Sources */,
+				7E45B63523DEF7830007FDB0 /* SingleObjectController.m in Sources */,
+				7E83453A23E998480041CD7A /* PaletteController.m in Sources */,
+				7E757AF323E9F90B0009BE1E /* CXFElement.m in Sources */,
 				7E45B64923DEF7A10007FDB0 /* readFile.m in Sources */,
+				7E757AF623E9FBCE0009BE1E /* CXFPalette.m in Sources */,
+				7E592D2E23EB1062007725A1 /* CieCmfXYZSingleton.m in Sources */,
 				7E45B63D23DEF7840007FDB0 /* main.m in Sources */,
 				7E45B63223DEF7830007FDB0 /* AppDelegate.m in Sources */,
 				7E45B64A23DEF7A10007FDB0 /* ColorClass.m in Sources */,
@@ -168,10 +208,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7E45B63823DEF7840007FDB0 /* Main.storyboard */ = {
+		7EDDB64323E8C1DA004BA1B9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7E45B63923DEF7840007FDB0 /* Base */,
+				7EDDB64423E8C1DA004BA1B9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -303,7 +343,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaviro.Spectrums-comparison";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -324,7 +364,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaviro.Spectrums-comparison";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

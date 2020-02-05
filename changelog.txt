@@ -1,0 +1,16 @@
+1.1 (05.02.20)
+
+New feature:
+ - Working with cxf files
+
+Bugs fixed:
+ - Opening file with incorrect structure
+
+1.0.1 (31.01.20)
+
+Bugs fixed:
+ - Opening incorrect formats
+
+1.0 (31.01.20)
+
+First release

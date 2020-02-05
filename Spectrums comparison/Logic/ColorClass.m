@@ -1,13 +1,15 @@
 //
 //  ColorClass.m
-//  Spector CLI
+//  Spectrums comparison
 //
 //  Created by Kirill Varshamov on 27.01.2020.
 //  Copyright © 2020 Kirill Varshamov. All rights reserved.
 //
 
 #import "ColorClass.h"
-#include "readFile.h"
+#import "readFile.h"
+
+#import "CieCmfXYZSingleton.h"
 
 @implementation ColorClass
 
@@ -16,6 +18,8 @@
 @synthesize X, Y, Z;
 @synthesize L, a, bb;
 
+
+// empty object/light
 -(instancetype) init
 {
     self = [super init];
@@ -39,6 +43,10 @@
     return self;
 }
 
+// ------------------------------------------------------------------------------------------
+// Single part
+
+// single object
 -(instancetype) initWithSpector: (NSString *) spectorFile
 {
     self = [super init];
@@ -62,59 +70,18 @@
             bb = [NSNumber numberWithDouble: 0.0];
         } else {
             // constants to translate spectrum to XYZ
-            CieCmfXYZ = [NSArray arrayWithObjects:
-                         @0.0014, @0.0000, @0.0065,
-                         @0.0042, @0.0001, @0.0201,
-                         @0.0143, @0.0004, @0.0679,
-                         @0.0435, @0.0012, @0.2074,
-                         @0.1344, @0.0040, @0.6456,
-                         @0.2839, @0.0116, @1.3856,
-                         @0.3483, @0.0230, @1.7471,
-                         @0.3362, @0.0380, @1.7721,
-                         @0.2908, @0.0600, @1.6692,
-                         @0.1954, @0.0910, @1.2876,
-                         @0.0956, @0.1390, @0.8130,
-                         @0.0320, @0.2080, @0.4652,
-                         @0.0049, @0.3230, @0.2720,
-                         @0.0093, @0.5030, @0.1582,
-                         @0.0633, @0.7100, @0.0782,
-                         @0.1655, @0.8620, @0.0422,
-                         @0.2904, @0.9540, @0.0203,
-                         @0.4334, @0.9950, @0.0087,
-                         @0.5945, @0.9950, @0.0039,
-                         @0.7621, @0.9520, @0.0021,
-                         @0.9163, @0.8700, @0.0017,
-                         @1.0263, @0.7570, @0.0011,
-                         @1.0622, @0.6310, @0.0008,
-                         @1.0026, @0.5030, @0.0003,
-                         @0.8544, @0.3810, @0.0002,
-                         @0.6424, @0.2650, @0.0000,
-                         @0.4479, @0.1750, @0.0000,
-                         @0.2835, @0.1070, @0.0000,
-                         @0.1649, @0.0610, @0.0000,
-                         @0.0874, @0.0320, @0.0000,
-                         @0.0468, @0.0170, @0.0000,
-                         @0.0227, @0.0082, @0.0000,
-                         @0.0114, @0.0041, @0.0000,
-                         @0.0058, @0.0021, @0.0000,
-                         @0.0029, @0.0010, @0.0000,
-                         @0.0014, @0.0005, @0.0000,
-                                                nil];
-            
+            CieCmfXYZ = [CieCmfXYZSingleton singleton].CieCmfXYZArray;
             [self spectorToXYZ];
             
             [self XYZToRGB];
             [self XYZToLab];
         }
-            
-        
-        
-        
     }
     
     return self;
 }
 
+// single object with light
 -(instancetype) initWithObject: (NSString *) spectorFile WithLight: (NSString *) lightFile
 {
     self = [super init];
@@ -149,46 +116,7 @@
             }
             
             // constants to translate spectrum to XYZ
-            CieCmfXYZ = [NSArray arrayWithObjects:
-                         @0.0014, @0.0000, @0.0065,
-                         @0.0042, @0.0001, @0.0201,
-                         @0.0143, @0.0004, @0.0679,
-                         @0.0435, @0.0012, @0.2074,
-                         @0.1344, @0.0040, @0.6456,
-                         @0.2839, @0.0116, @1.3856,
-                         @0.3483, @0.0230, @1.7471,
-                         @0.3362, @0.0380, @1.7721,
-                         @0.2908, @0.0600, @1.6692,
-                         @0.1954, @0.0910, @1.2876,
-                         @0.0956, @0.1390, @0.8130,
-                         @0.0320, @0.2080, @0.4652,
-                         @0.0049, @0.3230, @0.2720,
-                         @0.0093, @0.5030, @0.1582,
-                         @0.0633, @0.7100, @0.0782,
-                         @0.1655, @0.8620, @0.0422,
-                         @0.2904, @0.9540, @0.0203,
-                         @0.4334, @0.9950, @0.0087,
-                         @0.5945, @0.9950, @0.0039,
-                         @0.7621, @0.9520, @0.0021,
-                         @0.9163, @0.8700, @0.0017,
-                         @1.0263, @0.7570, @0.0011,
-                         @1.0622, @0.6310, @0.0008,
-                         @1.0026, @0.5030, @0.0003,
-                         @0.8544, @0.3810, @0.0002,
-                         @0.6424, @0.2650, @0.0000,
-                         @0.4479, @0.1750, @0.0000,
-                         @0.2835, @0.1070, @0.0000,
-                         @0.1649, @0.0610, @0.0000,
-                         @0.0874, @0.0320, @0.0000,
-                         @0.0468, @0.0170, @0.0000,
-                         @0.0227, @0.0082, @0.0000,
-                         @0.0114, @0.0041, @0.0000,
-                         @0.0058, @0.0021, @0.0000,
-                         @0.0029, @0.0010, @0.0000,
-                         @0.0014, @0.0005, @0.0000,
-                                                nil];
-            
-
+            CieCmfXYZ = [CieCmfXYZSingleton singleton].CieCmfXYZArray;
             
             spector = [NSArray arrayWithArray: tmpArr];
             
@@ -202,6 +130,97 @@
     
     return self;
 }
+
+// ------------------------------------------------------------------------------------------
+
+
+
+// ------------------------------------------------------------------------------------------
+// Palette part
+
+// object from cxf palette
+-(instancetype) initWithObjectSpectrumsArray: (NSArray *) objectSpectrumsArray
+{
+    self = [super init];
+    
+    if (self) {
+        spector = objectSpectrumsArray;
+        
+        if ([spector count] != 36) {
+            spector = [NSArray array];
+            CieCmfXYZ = [NSArray array];
+            R = [NSNumber numberWithInt: 0];
+            G = [NSNumber numberWithInt: 0];
+            B = [NSNumber numberWithInt: 0];
+            
+            X = [NSNumber numberWithDouble: 0.0];
+            Y = [NSNumber numberWithDouble: 0.0];
+            Z = [NSNumber numberWithDouble: 0.0];
+
+            L = [NSNumber numberWithDouble: 0.0];
+            a = [NSNumber numberWithDouble: 0.0];
+            bb = [NSNumber numberWithDouble: 0.0];
+        } else {
+            // constants to translate spectrum to XYZ
+            CieCmfXYZ = [CieCmfXYZSingleton singleton].CieCmfXYZArray;
+            
+            [self spectorToXYZ];
+            
+            [self XYZToRGB];
+            [self XYZToLab];
+        }
+    }
+    
+    return self;
+}
+
+// object with light from cxf palette
+-(instancetype) initWithObjectSpectrumsArray: (NSArray *) objectSpectrumsArray andLightSpectrumsArray: (NSArray *) lightSpectrumsArray
+{
+    self = [super init];
+    
+    if (self) {
+        
+        NSMutableArray *tmpSpectrums = [NSMutableArray array];
+        
+        for(int i = 0; i != [lightSpectrumsArray count]; ++i)
+        {
+            [tmpSpectrums addObject: [[NSNumber alloc] initWithDouble:[objectSpectrumsArray[i] doubleValue] * [lightSpectrumsArray[i] doubleValue]]];
+        }
+        
+        spector = [NSArray arrayWithArray: tmpSpectrums];
+        
+        if ([spector count] != 36) {
+            spector = [NSArray array];
+            CieCmfXYZ = [NSArray array];
+            R = [NSNumber numberWithInt: 0];
+            G = [NSNumber numberWithInt: 0];
+            B = [NSNumber numberWithInt: 0];
+            
+            X = [NSNumber numberWithDouble: 0.0];
+            Y = [NSNumber numberWithDouble: 0.0];
+            Z = [NSNumber numberWithDouble: 0.0];
+
+            L = [NSNumber numberWithDouble: 0.0];
+            a = [NSNumber numberWithDouble: 0.0];
+            bb = [NSNumber numberWithDouble: 0.0];
+        } else {
+            // constants to translate spectrum to XYZ
+            CieCmfXYZ = [CieCmfXYZSingleton singleton].CieCmfXYZArray;
+            
+            [self spectorToXYZ];
+            
+            [self XYZToRGB];
+            [self XYZToLab];
+        }
+    }
+    
+    return self;
+}
+
+// ------------------------------------------------------------------------------------------
+
+
 
 -(void) spectorToXYZ
 {
@@ -491,4 +510,3 @@
 }
 
 @end
-
